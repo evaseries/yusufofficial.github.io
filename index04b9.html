@@ -25,6 +25,40 @@
       .vlt-section__projects-background {
         backdrop-filter: blur(10px); /* You can adjust the blur value as needed */
       }
+     
+        .vlt-section__projects-background {
+          backdrop-filter: blur(10px); /* You can adjust the blur value as needed */
+        }
+      
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+      
+        input {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+      
+        button {
+          background-color: transparent; /* Initial transparent background */
+          color: #ffffff;
+          padding: 10px 15px;
+          border: 1px solid #fff; /* Adjust the border color */
+          width: 200px;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+      
+        button:hover {
+          background-color: #db3434; /* Opaque color on hover */
+        }
+    
       
     </style>
   </head>
@@ -425,20 +459,24 @@
                     <div class="vlt-animated-block" data-animation-name="fadeInUpSm" style="animation-delay:.1s; animation-duration:700ms;">
                       <h4>Let's Mailing <span class="has-accent-color">chat with me.</span></h4>
                       <div class="vlt-gap-20"></div>
-                      <form class="vlt-contact-form" action:"https://formspree.io/f/mdoqkvva" 
-                        method="POST">
-                        <div class="vlt-form-group">
-                          <input type="text" name="name" required="required" placeholder="Your Name">
-                        </div>
-                        <div class="vlt-form-group">
-                          <input type="email" name="_replyto" required="required" placeholder="Your Email">
-                        </div>
-                        <div class="vlt-form-group">
-                          <textarea name="message" rows="3" placeholder="Message"></textarea>
-                        </div>
-                        <!--Button-->
-                        <button type="submit" class="vlt-btn vlt-btn--primary vlt-btn--md">Contact Me</button>
-                      </form>
+                     <form
+                      action="https://formspree.io/f/mdoqkvva"
+                      method="POST"
+                    ><label>
+                      Your name:
+                      <input type="text" name="name">
+                    </label>
+                      <label>
+                        Your email:
+                        <input type="email" name="email">
+                      </label>
+                      <label>
+                        Your message:
+                        <textarea name="message"></textarea>
+                      </label>
+                      <!-- your other form fields go here -->
+                      <button type="submit">Send</button>
+                    </form>
                     </div>
                   </div>
                 </div>
